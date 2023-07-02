@@ -19,9 +19,10 @@ export default function Home() {
 }
 catch(err){
     console.log(err)
-}
-  }, [])
+  }
+}, [])
 
+console.log('env',process.env.NEXT_PUBLIC_API_URI)
   return (
     <>
       <Head>
