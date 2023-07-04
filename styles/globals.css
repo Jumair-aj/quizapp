@@ -95,9 +95,10 @@ margin-top: 3rem;
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
-  cursor: pointer;
   transition: 0.3s all ease-in-out;
   width: min(350px,80%);
+  display: flex;
+  justify-content: center;
 }
 
 .subjectBtn:nth-child(odd){
