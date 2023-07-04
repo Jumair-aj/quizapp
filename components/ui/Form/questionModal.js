@@ -102,8 +102,8 @@ console.log(res)
            /> */}
             <select onChange={formik.handleChange} 
              value={formik.values.subject}>{
-    subjects.map( (x,y) => 
-      <option key={y}>{x}</option> )
+              subjects && subjects.map( (x,y) => 
+      <option key={y}>{x.subject}</option> )
   }</select>
            <label htmlFor="tags">Tags</label>
            <input
