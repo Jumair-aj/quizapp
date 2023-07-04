@@ -2,6 +2,7 @@ import axios from "axios";
 import { Field, FieldArray, Formik } from "formik";
 import React from "react";
 import {GrClose} from 'react-icons/gr'
+import { useEffect, useState } from 'react'
 
 export default function QuestionModal({setShowModal}) {
   const [subjects, setSubjects] = useState('')
