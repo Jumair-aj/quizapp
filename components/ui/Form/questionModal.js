@@ -4,6 +4,19 @@ import React from "react";
 import {GrClose} from 'react-icons/gr'
 
 export default function QuestionModal({setShowModal}) {
+  const [subjects, setSubjects] = useState('')
+  useEffect(() => {
+    try{
+      axios.get(process.env.NEXT_PUBLIC_API_URI+'/subject').then((res)=>{
+      setSubjects(res.data)
+     }
+      )
+}
+catch(err){
+    console.log(err)
+  }
+}, [])
+
   return (
     <div className="modal">
       <button onClick={()=>setShowModal(false)} className="closeBtn pointer-cursor"><GrClose size={30}/></button>
@@ -80,12 +93,17 @@ console.log(res)
           )}
         </FieldArray>
            <label htmlFor="subject">Subjects</label>
-           <input
+           {/* <input
              id="subject"
              type="text"
              onChange={formik.handleChange} 
              value={formik.values.subject}
-           />
+           /> */}
+            <select onChange={formik.handleChange} 
+             value={formik.values.subject}>{
+    subjects.map( (x,y) => 
+      <option key={y}>{x}</option> )
+  }</select>
            <label htmlFor="tags">Tags</label>
            <input
              id="tags"
