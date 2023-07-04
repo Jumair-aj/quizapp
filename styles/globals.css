@@ -119,9 +119,9 @@ margin-top: 3rem;
   background-color: #f9f9f9;
   height: fit-content;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .addSubjectBtn{
