@@ -12,7 +12,7 @@ export default function Home() {
   const router = useRouter()
   useEffect(() => {
     try{
-      axios.get(process.env.API_URI+'/subject').then((res)=>{
+      axios.get(process.env.NEXT_PUBLIC_API_URI+'/subject').then((res)=>{
       setSubjects(res.data)
      }
       )
@@ -22,7 +22,7 @@ catch(err){
   }
 }, [])
 
-console.log('env',process.env.API_URI)
+console.log('env',process.env.NEXT_PUBLIC_API_URI)
   return (
     <>
       <Head>
