@@ -12,7 +12,7 @@ body {
 
 body {
 
-  background:#f9f9f9;
+  background:#fff;
   color: #101d42;
 }
 
@@ -37,6 +37,7 @@ form{
   flex-direction: column;
   padding: 4rem;
 }
+
 label{
   color: #333;
 }
@@ -82,7 +83,7 @@ width: 100%;
 flex-wrap: wrap;
 justify-content: space-between;
 gap: 1rem;
-margin-top: 5rem;
+margin-top: 3rem;
 }
 
 .subjectBtn{
@@ -96,12 +97,11 @@ margin-top: 5rem;
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
-  width: 350px;
+  width: min(350px,80%);
 }
 
 .subjectBtn:nth-child(odd){
   background-color: #ff9800;
-  
 }
 .subjectBtn:nth-child(even){
   background-color: #0067ff;
@@ -116,11 +116,12 @@ margin-top: 5rem;
 }
 .header{
   /* padding: 0.5rem 7rem; */
-  background-color: #fff;
+  background-color: #f9f9f9;
   height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 
 .addSubjectBtn{
@@ -202,8 +203,7 @@ form label{
   margin-bottom: 2rem;
   border-radius: 18px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  width: min(700px,100%);
-
+  width: min(700px,90%);
   margin: 3rem auto;
 }
 .questionDiv h3{
@@ -228,6 +228,9 @@ button:not(:disabled){
 .container, .container-sm {
     max-width: 540px;
 }
+form{
+  padding: 1rem;
+}
 }
 
 @media (min-width: 992px){
@@ -243,6 +246,7 @@ button:not(:disabled){
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1320px;}
 }
+
 /* default */
 
 .pointer-cursor{
